@@ -18,13 +18,14 @@ const habitacionSchema = new Schema({
     },
     condicion: {
         type: String,
-        required: true,
-        enum: ['Buena', 'Regular', 'Mala']
+        required: true
     },
     comidas: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        enum: ['Blanda', 'Normal', 'Líquida']
+
     },
     fechaIngreso: {
         type: Date,
