@@ -3,6 +3,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors';
 import authRoutes from './routers/authRoutes.js'
+import routerHabitaciones from "./routers/habitacionesRoutes.js";
 
 
 // Inicializaciones
@@ -26,6 +27,7 @@ app.use(express.json())
 
 // Rutas 
 app.use('/api',authRoutes)
+app.use('/api/habitaciones',routerHabitaciones)
 // Manejo de una ruta que no sea encontrada
 app.use((req,res)=>res.status(404).send("Endpoint no encontrado - 404"))
 
