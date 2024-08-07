@@ -1,7 +1,7 @@
-import mongoose, {Schema,model} from 'mongoose'
+import {Schema, model} from 'mongoose'
 
 
-const habitacionSchema = new Schema({
+const habitacionesSchema = new Schema({
     nombres: {
         type: String,
         required: true,
@@ -40,4 +40,4 @@ const habitacionSchema = new Schema({
     timestamps: true
 });
 
-export default model('Habitacion',habitacionSchema)
+export default model('Habitacion',habitacionesSchema)

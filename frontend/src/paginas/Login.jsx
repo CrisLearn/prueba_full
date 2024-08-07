@@ -32,7 +32,7 @@ export default function Login() {
       const data = await response.json();
 
       if (response.ok) {
-        // Maneja el éxito, por ejemplo, redirigiendo o mostrando un mensaje
+        // Maneja el éxito, por ejemplo, redirigiendo a la página de habitaciones
         console.log('Usuario correcto:', data);
         navigate('/habitaciones'); // Redirige después de un login exitoso
       } else {
