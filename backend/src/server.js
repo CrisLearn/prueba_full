@@ -2,13 +2,15 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors';
-import authRoutes from './routers/authRoutes.js'
+import admin_Routes from './routers/admin_Routes.js'
+import habitaciones_Routes from './routers/habitacionesRoutes.js'
+import connection from './database.js';
 
 
 // Inicializaciones
 const app = express()
 dotenv.config()
-connectDB()
+connection()
 
 // Configuraciones 
 app.set('port',process.env.port || 3000)
@@ -26,8 +28,8 @@ app.use(express.json())
 
 
 // Rutas 
-app.use('/api',authRoutes)
-app.use('/api/habitaciones',routerHabitaciones)
+app.use('/api',admin_Routes)
+app.use('/api/habitaciones',habitaciones_Routes)
 // Manejo de una ruta que no sea encontrada
 app.use((req,res)=>res.status(404).send("Endpoint no encontrado - 404"))
 
