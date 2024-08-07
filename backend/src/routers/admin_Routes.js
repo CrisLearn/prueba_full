@@ -1,7 +1,7 @@
 // src/routes/authRoutes.js
 
 import { Router } from 'express';
-import { login } from '../controllers/authController.js';
+import { login } from '../controllers/admin_controller.js';
 
 const router = Router();
 

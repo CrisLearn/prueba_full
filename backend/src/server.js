@@ -2,12 +2,14 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors';
-import authRoutes from './routers/authRoutes.js'
+import authRoutes from './routers/admin_Routes.js'
+import connectDB from './database.js';
 
 
 // Inicializaciones
 const app = express()
 dotenv.config()
+connectDB()
 
 // Configuraciones 
 app.set('port',process.env.port || 3000)
